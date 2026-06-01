@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react"
 import { ShaderMount, meshGradientFragmentShader, getShaderColorFromString } from "@paper-design/shaders"
 
-// Purple + black palette for Kyro
+// Dark purple + black palette for Kyro
 const COLORS = [
   "#000000",   // black
-  "#0d0118",   // near-black purple
-  "#1a0a2e",   // deep purple
-  "#2d1b69",   // medium purple
-  "#7c3aed",   // vivid violet
+  "#03000a",   // near-black
+  "#07011a",   // very dark purple
+  "#0d0426",   // deep dark purple
+  "#1a0a3a",   // dark purple
 ] as const
 
 export default function KyroBackground() {
