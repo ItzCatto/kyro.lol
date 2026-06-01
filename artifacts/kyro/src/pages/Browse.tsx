@@ -1,55 +1,39 @@
-import { useState } from "react";
 import { links } from "@/data/links";
-import ResourceCard from "@/components/ResourceCard";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-
-const categories = ["all", "games", "emulators", "roms", "movies", "tools"];
+import { ArrowUpRight } from "lucide-react";
 
 export default function Browse() {
-  const [activeFilter, setActiveFilter] = useState("all");
-
-  const filteredLinks = activeFilter === "all" 
-    ? links 
-    : links.filter(l => l.category === activeFilter);
-
   return (
-    <div className="space-y-8 pb-12 pt-4">
-      <div>
-        <h1 className="text-4xl font-bold text-white tracking-tight mb-4">Browse Directory</h1>
-        <p className="text-muted-foreground">Discover our complete collection of curated resources.</p>
-      </div>
+    <div className="flex flex-col items-center justify-center min-h-[80vh]">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-5xl md:text-7xl font-extrabold text-white tracking-tighter mb-12 text-center"
+      >
+        Links
+      </motion.h1>
 
-      <div className="flex flex-wrap gap-2 mb-8">
-        {categories.map(cat => (
-          <Button
-            key={cat}
-            variant={activeFilter === cat ? "default" : "secondary"}
-            className="capitalize rounded-full px-6"
-            onClick={() => setActiveFilter(cat)}
-            data-testid={`filter-${cat}`}
-          >
-            {cat}
-          </Button>
-        ))}
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredLinks.map((link, i) => (
-          <motion.div
+      <div className="flex flex-col items-center gap-3 w-full max-w-sm">
+        {links.map((link, i) => (
+          <motion.a
             key={link.id}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: i * 0.05 }}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid={`link-${link.id}`}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: 0.1 + i * 0.06 }}
+            className="w-full flex items-center justify-between px-5 py-3 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm font-medium hover:bg-white/10 hover:text-white transition-all group"
           >
-            <ResourceCard link={link} />
-          </motion.div>
+            <span>{link.title}</span>
+            <span className="inline-flex items-center gap-1 text-white/40 group-hover:text-white/70 transition-colors text-xs">
+              Open
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </span>
+          </motion.a>
         ))}
-        {filteredLinks.length === 0 && (
-          <div className="col-span-full py-20 text-center text-muted-foreground border border-dashed border-border rounded-xl">
-            No resources found in this category.
-          </div>
-        )}
       </div>
     </div>
   );
