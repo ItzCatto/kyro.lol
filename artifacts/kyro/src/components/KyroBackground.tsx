@@ -1,128 +1,66 @@
 import { useEffect, useRef } from "react"
+import { ShaderMount, meshGradientFragmentShader, getShaderColorFromString } from "@paper-design/shaders"
 
-const VERT = `
-attribute vec2 position;
-void main() {
-  gl_Position = vec4(position, 0.0, 1.0);
-}
-`
-
-const FRAG = `
-precision mediump float;
-uniform float time;
-uniform vec2 resolution;
-
-vec3 palette(float t) {
-  // Deep purple to near-black gradient palette
-  vec3 a = vec3(0.04, 0.02, 0.12);
-  vec3 b = vec3(0.11, 0.04, 0.28);
-  vec3 c = vec3(0.06, 0.01, 0.18);
-  vec3 d = vec3(0.18, 0.11, 0.42);
-  return a + b * cos(6.28318 * (c * t + d));
-}
-
-float noise(vec2 p) {
-  return sin(p.x * 3.0 + time * 0.3)
-       * cos(p.y * 2.5 + time * 0.25)
-       + sin(p.x * 1.5 - p.y * 2.0 + time * 0.2) * 0.5
-       + cos(p.x * 4.0 + p.y * 3.5 + time * 0.15) * 0.3;
-}
-
-void main() {
-  vec2 uv = gl_FragCoord.xy / resolution;
-  uv.x *= resolution.x / resolution.y;
-
-  float n = noise(uv * 2.5) * 0.5 + 0.5;
-  float radial = 1.0 - length(uv - vec2(0.5 * resolution.x / resolution.y, 0.5)) * 1.2;
-  radial = clamp(radial, 0.0, 1.0);
-
-  vec3 col = palette(n + time * 0.05);
-  col *= radial * 1.4;
-
-  // Add a soft purple glow in the centre
-  float glow = exp(-length(uv - vec2(0.5 * resolution.x / resolution.y, 0.45)) * 4.0);
-  col += vec3(0.12, 0.04, 0.35) * glow * 0.6;
-
-  gl_FragColor = vec4(col, 1.0);
-}
-`
-
-function compileShader(gl: WebGLRenderingContext, src: string, type: number) {
-  const s = gl.createShader(type)!
-  gl.shaderSource(s, src)
-  gl.compileShader(s)
-  return s
-}
+// Purple + black palette for Kyro
+const COLORS = [
+  "#000000",   // black
+  "#0d0118",   // near-black purple
+  "#1a0a2e",   // deep purple
+  "#2d1b69",   // medium purple
+  "#7c3aed",   // vivid violet
+] as const
 
 export default function KyroBackground() {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const divRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
+    const parent = divRef.current
+    if (!parent) return
 
-    const gl = canvas.getContext("webgl")
-    if (!gl) return
+    const u_colors = COLORS.map((c) => getShaderColorFromString(c))
+    const u_colorsCount = COLORS.length
 
-    const vert = compileShader(gl, VERT, gl.VERTEX_SHADER)
-    const frag = compileShader(gl, FRAG, gl.FRAGMENT_SHADER)
-
-    const prog = gl.createProgram()!
-    gl.attachShader(prog, vert)
-    gl.attachShader(prog, frag)
-    gl.linkProgram(prog)
-    gl.useProgram(prog)
-
-    const buf = gl.createBuffer()
-    gl.bindBuffer(gl.ARRAY_BUFFER, buf)
-    gl.bufferData(
-      gl.ARRAY_BUFFER,
-      new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]),
-      gl.STATIC_DRAW,
-    )
-
-    const posLoc = gl.getAttribLocation(prog, "position")
-    gl.enableVertexAttribArray(posLoc)
-    gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0)
-
-    const timeLoc = gl.getUniformLocation(prog, "time")
-    const resLoc = gl.getUniformLocation(prog, "resolution")
-
-    let animId: number
-    let start: number | null = null
-
-    const resize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-      gl.viewport(0, 0, canvas.width, canvas.height)
+    let mount: InstanceType<typeof ShaderMount> | null = null
+    try {
+      mount = new ShaderMount(
+        parent,
+        meshGradientFragmentShader,
+        {
+          // MeshGradient uniforms
+          u_colors,
+          u_colorsCount,
+          u_distortion: 0.8,
+          u_swirl: 0.3,
+          u_grainMixer: 0.04,
+          u_grainOverlay: 0.0,
+          // Sizing uniforms (cover = 2)
+          u_fit: 2,
+          u_scale: 1,
+          u_rotation: 0,
+          u_offsetX: 0,
+          u_offsetY: 0,
+          u_originX: 0.5,
+          u_originY: 0.5,
+          u_worldWidth: 0,
+          u_worldHeight: 0,
+        },
+        /* webGlContextAttributes */ undefined,
+        /* speed */ 0.4,
+      )
+    } catch {
+      // WebGL not available in this environment — CSS fallback is visible via body background
     }
-    resize()
-    window.addEventListener("resize", resize)
-
-    const render = (ts: number) => {
-      if (start === null) start = ts
-      const t = (ts - start) / 1000
-
-      gl.uniform1f(timeLoc, t)
-      gl.uniform2f(resLoc, canvas.width, canvas.height)
-      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
-      animId = requestAnimationFrame(render)
-    }
-
-    animId = requestAnimationFrame(render)
 
     return () => {
-      cancelAnimationFrame(animId)
-      window.removeEventListener("resize", resize)
+      mount?.dispose()
     }
   }, [])
 
   return (
-    <canvas
-      ref={canvasRef}
+    <div
+      ref={divRef}
       aria-hidden="true"
-      className="fixed inset-0 -z-10 w-full h-full pointer-events-none"
-      style={{ display: "block" }}
+      className="fixed inset-0 -z-10 w-full h-full pointer-events-none overflow-hidden"
     />
   )
 }

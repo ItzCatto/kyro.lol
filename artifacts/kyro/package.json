@@ -75,6 +75,7 @@
     "zod": "catalog:"
   },
   "dependencies": {
+    "@paper-design/shaders": "^0.0.76",
     "@paper-design/shaders-react": "^0.0.76",
     "@react-three/fiber": "^9.6.1",
     "@types/three": "^0.184.1",

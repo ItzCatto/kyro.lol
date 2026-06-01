@@ -218,6 +218,9 @@ importers:
 
   artifacts/kyro:
     dependencies:
+      '@paper-design/shaders':
+        specifier: ^0.0.76
+        version: 0.0.76
       '@paper-design/shaders-react':
         specifier: ^0.0.76
         version: 0.0.76(@types/react@19.2.14)(react@19.1.0)
