@@ -22,7 +22,7 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-xl text-muted-foreground max-w-2xl mx-auto"
         >
-          Your curated underground portal to free games, retro emulators, movies, and community tools.
+          Free games, emulators, movies, shows, exploits, and tools.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
