@@ -42,7 +42,7 @@ export default function Home() {
             <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
           </a>
           <a
-            href="https://discord.gg/kyro"
+            href="https://discord.gg/bxxvUQWhS7"
             target="_blank"
             rel="noopener noreferrer"
             data-testid="button-support"
