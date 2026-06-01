@@ -19,12 +19,9 @@
     <script>
       (function() {
         const p = new URLSearchParams(window.location.search).get("p");
-        if (p) {
-          window.history.replaceState(null, "", "/kyro.lol" + p);
-        }
+        if (p) window.history.replaceState(null, "", p);
       })();
     </script>
-  <script>(function(){const p=new URLSearchParams(window.location.search).get("p");if(p){window.history.replaceState(null,"",p);}})();</script>
   </head>
   <body>
     <div id="root"></div>
