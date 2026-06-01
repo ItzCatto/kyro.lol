@@ -2,12 +2,10 @@
 <html>
   <head>
     <script>
-      const path = window.location.pathname;
-      const search = window.location.search;
-      const hash = window.location.hash;
       const base = '/kyro.lol';
-      const redirect = base + '/?p=' + encodeURIComponent(path.replace(base, '') + search) + (hash ? '&hash=' + encodeURIComponent(hash) : '');
-      window.location.replace(redirect);
+      const path = window.location.pathname.replace(base, '') || '/';
+      const search = window.location.search;
+      window.location.replace(base + '/?p=' + encodeURIComponent(path + search));
     </script>
   </head>
 </html>
