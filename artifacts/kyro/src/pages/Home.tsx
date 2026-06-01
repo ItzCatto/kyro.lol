@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, ArrowUpRight } from "lucide-react";
+import { MessageCircle, ArrowUpRight, HeadphonesIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -28,7 +28,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-10"
+          className="mt-10 flex items-center justify-center gap-3"
         >
           <a
             href="https://discord.gg/kyro"
@@ -39,6 +39,17 @@ export default function Home() {
           >
             <MessageCircle className="w-4 h-4" />
             Discord
+            <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
+          </a>
+          <a
+            href="https://discord.gg/kyro"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="button-support"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm font-medium hover:bg-white/10 hover:text-white transition-all"
+          >
+            <HeadphonesIcon className="w-4 h-4" />
+            Support
             <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
           </a>
         </motion.div>
