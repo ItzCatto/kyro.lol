@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-      - run: pnpm install
+      - run: pnpm install --ignore-scripts
       - run: pnpm --filter @workspace/kyro run build
         env:
           PORT: "3000"
