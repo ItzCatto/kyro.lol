@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Kyro Hub"
+version = "1.0.0"
+id = "artifacts/kyro"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18273
+
+[services.development]
+run = "pnpm --filter @workspace/kyro run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kyro", "run", "build" ]
+publicDir = "artifacts/kyro/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18273"
+BASE_PATH = "/"
