@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, ArrowUpRight, HeadphonesIcon } from "lucide-react";
+import { MessageCircle, ArrowUpRight, LifeBuoy } from "lucide-react";
 
 export default function Home() {
   return (
@@ -48,7 +48,7 @@ export default function Home() {
             data-testid="button-support"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm font-medium hover:bg-white/10 hover:text-white transition-all"
           >
-            <HeadphonesIcon className="w-4 h-4" />
+            <LifeBuoy className="w-4 h-4" />
             Support
             <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
           </a>
