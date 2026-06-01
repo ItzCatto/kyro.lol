@@ -2,10 +2,9 @@
 <html>
   <head>
     <script>
-      const base = '/kyro.lol';
-      const path = window.location.pathname.replace(base, '') || '/';
+      const path = window.location.pathname;
       const search = window.location.search;
-      window.location.replace(base + '/?p=' + encodeURIComponent(path + search));
+      window.location.replace('/?p=' + encodeURIComponent(path + search));
     </script>
   </head>
 </html>
