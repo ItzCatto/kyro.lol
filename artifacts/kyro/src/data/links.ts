@@ -5,10 +5,10 @@ export interface KyroLink {
 }
 
 export const links: KyroLink[] = [
-  { slug: "cineby",      title: "Now.gg",       url: "https://now.gg" },
+  { slug: "now-gg",      title: "Now.gg",       url: "https://now.gg" },
   { slug: "emulatorjs",  title: "EmulatorJS",   url: "https://emulatorjs.org" },
   { slug: "vimms-lair",  title: "Vimm's Lair",  url: "https://vimm.net" },
   { slug: "soap2day",    title: "Soap2Day",      url: "https://soap2day.rs" },
   { slug: "123movies",   title: "123Movies",     url: "https://123movies.ai" },
-  { slug: "discord",     title: "Kyro Discord",  url: "https://discord.gg/kyro" },
+  { slug: "discord",     title: "Kyro Discord",  url: "https://discord.gg/bxxvUQWhS7" },
 ];
