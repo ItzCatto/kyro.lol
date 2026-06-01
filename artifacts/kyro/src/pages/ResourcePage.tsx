@@ -18,7 +18,7 @@ export default function ResourcePage() {
         transition={{ duration: 0.5 }}
         className="text-5xl md:text-7xl font-extrabold text-white tracking-tighter mb-12 text-center"
       >
-        {resource.title}
+        {resource.slug}
       </motion.h1>
 
       <motion.a
