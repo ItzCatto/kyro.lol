@@ -11,4 +11,5 @@ export const links: KyroLink[] = [
   { slug: "solara", title: "Solara", url: "https://getsolara.dev/download/static/files/BootstrapperNew.exe" },
   { slug: "bloodsync", title: "BloodSync", url: "https://www.youtube.com/watch?v=UzyzAqQ3DXI" },
   { slug: "xeno", title: "Xeno", url: "https://www.xeno.now/download" },
+  { slug: "backrooms". title: "Backrooms", url: "https://lordflix.org/watch/movie/1083381" },
 ];
