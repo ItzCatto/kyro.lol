@@ -12,9 +12,10 @@ export const links: KyroLink[] = [
 
   // PC Games
   { slug: "steamrip", title: "SteamRip", url: "https://steamrip.com/" },
-  { slug: "fitgirl", title: "FitGirl", url: "https://fitgirl-repacks.site" },
+  { slug: "fitgirl", title: "FitGirl Repacks", url: "https://fitgirl-repacks.site" },
   { slug: "csrin", title: "CS.RIN.RU", url: "https://cs.rin.ru/" },
   { slug: "gog-games", title: "GOG Games", url: "https://gog-games.to/" },
+  { slug: "iggames", title: "IGG Games", url: "https://igg-games.com" },
 
   // Roblox Exploits / Executors / Scripts
   { slug: "solara", title: "Solara", url: "https://getsolara.dev/download/static/files/BootstrapperNew.exe" },
@@ -64,10 +65,21 @@ export const links: KyroLink[] = [
   { slug: "myabandonware", title: "My Abandonware", url: "https://www.myabandonware.com/" },
   { slug: "cattolol", title: "CattoLoL", url: "https://sites.google.com/view/lolcatto" },
 
+  // Torrent Sites (Cleaned - Safer ones only)
+  { slug: "1337x", title: "1337x", url: "https://1337x.to" },
+  { slug: "piratebay", title: "The Pirate Bay", url: "https://thepiratebay.org/index.html" },
+  { slug: "yts", title: "YTS", url: "https://www12.yts-official.to" },
+  { slug: "rarbg", title: "RARBG Proxy", url: "https://www.rarbgproxy.to" },
+  { slug: "nyaa", title: "Nyaa", url: "https://nyaa.eu" },
+  { slug: "rutracker", title: "RuTracker", url: "https://rutracker.org" },
+  { slug: "torrentleech", title: "TorrentLeech", url: "https://www.torrentleech.org/" },
+  { slug: "iptorrents", title: "IPTorrents", url: "https://iptorrents.me" },
+
   // A.I. / Others
   { slug: "fmhy-ai", title: "FMHY AI", url: "https://fmhy.net/ai" },
+  { slug: "leofame", title: "LeoFame", url: "https://leofame.com" },
 
-  // School / Proxies / Exploits
+  // School / Proxies
   { slug: "croxyproxy", title: "CroxyProxy", url: "https://www.croxyproxy.com/" },
   { slug: "unblockit", title: "UnblockIt", url: "https://unblockit.buzz/" },
 
