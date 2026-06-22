@@ -47,4 +47,5 @@ export const links: KyroLink[] = [
 { slug: "romulation", title: "RomUlation", url: "https://www.romulation.org/" },
 { slug: "retrostic", title: "Retrostic", url: "https://www.retrostic.com/" },
 { slug: "nxbrew", title: "NXBrew", url: "https://nxbrew.net/" },
+{ slug: "cattolol", title: "CattoLoL", url: "https://sites.google.com/view/lolcatto" },
 ];
