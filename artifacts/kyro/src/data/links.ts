@@ -79,6 +79,7 @@ export const links: KyroLink[] = [
   { slug: "fmhy-ai", title: "FMHY AI", url: "https://fmhy.net/ai" },
   { slug: "leofame", title: "LeoFame", url: "https://leofame.com" },
   { slug: "venaceai", title: "Venace AI", url: "https://venice.ai" },
+  { slug: "qqtube", title: "QQtube", url: "https://qqtube.com/free" },
 
   // School / Proxies
   { slug: "croxyproxy", title: "CroxyProxy", url: "https://www.croxyproxy.com/" },
