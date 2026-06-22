@@ -25,6 +25,7 @@ export const links: KyroLink[] = [
   { slug: "scriptblox", title: "ScriptBlox", url: "https://scriptblox.com/" },
   { slug: "rbxscript", title: "RBXScript", url: "https://rbxscript.com/" },
   { slug: "cattohub", title: "CattoHub", url: "https://discord.gg/Ey9uGhp3vQ" },
+  { slug: "volt", title: "Volt", url: "https://voltbz.net" },
 
   // Music
   { slug: "artistgrid", title: "ArtistGrid", url: "https://artistgrid.cx/" },
