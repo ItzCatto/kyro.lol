@@ -113,11 +113,12 @@ export const links: KyroLink[] = [
 
   // External / Others
   { slug: "serotonin", title: "Serotonin", url: "https://serotonin.lol/" },
-  { slug: "severe", title: "Severe", url: "https://severe.lol/" },
-  { slug: "rbxcli", title: "RbxCli", url: "" },
-  { slug: "lumen", title: "Lumen", url: "" },
-  { slug: "matcha", title: "Matcha", url: "" },
-  { slug: "matrixhub", title: "Matrix Hub", url: "" },
-  { slug: "photon", title: "Photon", url: "" },
-  { slug: "dx9ware", title: "DX9WARE V2", url: "" },
+  { slug: "severe", title: "Severe", url: "https://discord.gg/QaheZpKzsX" },
+  { slug: "rbxcli", title: "RbxCli", url: "https://discord.gg/RZgUP8UZQ3" },
+  { slug: "lumen", title: "Lumen", url: "https://getlumen.net/" },
+  { slug: "matcha", title: "Matcha", url: "https://matcha-latte.win/" },
+  { slug: "matrixhub", title: "Matrix Hub", url: "https://matrixhubs.shop/" },
+  { slug: "photon", title: "Photon", url: "https://photonsys.sellpass.io/" },
+  { slug: "dx9ware", title: "DX9WARE V2", url: "https://cultofintellect.com/" },
+  { slug: "whatexpsare", title: "WhatExpsAre.Online", url: "https://whatexpsare.online/" },
 ];
