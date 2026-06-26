@@ -85,6 +85,8 @@ export const links: KyroLink[] = [
   // School / Proxies
   { slug: "croxyproxy", title: "CroxyProxy", url: "https://www.croxyproxy.com/" },
   { slug: "unblockit", title: "UnblockIt", url: "https://unblockit.buzz/" },
+  { slug: "c00lkiddtech", title: "c00lkiddtech", url: "https://c00lkiddtech.live"},
+  { slug: "bestspark", title: "BestSparks Site", url: "https://bestspark.org"},
 
   // Discord Mods
   { slug: "betterdiscord", title: "BetterDiscord", url: "https://betterdiscord.app/" },
