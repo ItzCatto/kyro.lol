@@ -91,8 +91,33 @@ export const links: KyroLink[] = [
   // Discord Mods
   { slug: "betterdiscord", title: "BetterDiscord", url: "https://betterdiscord.app/" },
   { slug: "vencord", title: "Vencord", url: "https://vencord.dev/" },
-  { slug: "velocity", title: "Velocity", url: "https://velocityexecutor.com/" },
-  { slug: "madium", title: "Madium", url: "https://madium.xyz/" },
+    // Roblox Executors (from whatexpsare.online)
+  { slug: "volt", title: "Volt", url: "https://buyvolt.xyz/" },
+  { slug: "potassium", title: "Potassium", url: "https://potassium.dev/" },
   { slug: "wave", title: "Wave", url: "https://waveexecutor.net/" },
   { slug: "synapsez", title: "Synapse Z", url: "https://synapsez.to/" },
+  { slug: "seliware", title: "Seliware", url: "https://seliware.com/" },
+  { slug: "madium", title: "Madium", url: "https://madium.xyz/" },
+  { slug: "cosmic", title: "Cosmic", url: "https://cosmicexploits.com/" },
+  { slug: "velocity", title: "Velocity", url: "https://velocityexecutor.com/" },
+  { slug: "sirhurt", title: "SirHurt", url: "https://sirhurt.net/" },
+
+  // Mac Executors
+  { slug: "macsploit", title: "MacSploit", url: "https://macsploit.com/" },
+  { slug: "opiumware", title: "Opiumware", url: "https://opiumware.xyz/" },
+
+  // Android Executors
+  { slug: "delta", title: "Delta", url: "https://delta-executor.com/" },
+  { slug: "vegax", title: "Vega X", url: "https://vegax.lol/" },
+  { slug: "codex", title: "Codex", url: "https://codex.lol/" },
+
+  // External / Others
+  { slug: "serotonin", title: "Serotonin", url: "https://serotonin.lol/" },
+  { slug: "severe", title: "Severe", url: "https://severe.lol/" },
+  { slug: "rbxcli", title: "RbxCli", url: "" },
+  { slug: "lumen", title: "Lumen", url: "" },
+  { slug: "matcha", title: "Matcha", url: "" },
+  { slug: "matrixhub", title: "Matrix Hub", url: "" },
+  { slug: "photon", title: "Photon", url: "" },
+  { slug: "dx9ware", title: "DX9WARE V2", url: "" },
 ];
