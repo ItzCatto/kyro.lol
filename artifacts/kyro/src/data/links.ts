@@ -91,4 +91,8 @@ export const links: KyroLink[] = [
   // Discord Mods
   { slug: "betterdiscord", title: "BetterDiscord", url: "https://betterdiscord.app/" },
   { slug: "vencord", title: "Vencord", url: "https://vencord.dev/" },
+  { slug: "velocity", title: "Velocity", url: "https://velocityexecutor.com/" },
+  { slug: "madium", title: "Madium", url: "https://madium.xyz/" },
+  { slug: "wave", title: "Wave", url: "https://waveexecutor.net/" },
+  { slug: "synapsez", title: "Synapse Z", url: "https://synapsez.to/" },
 ];
