@@ -31,7 +31,7 @@ export default function Home() {
           className="mt-10 flex items-center justify-center gap-3"
         >
           <a
-            href="https://discord.gg/bxxvUQWhS7"
+            href="https://discord.gg/dzBkXQg4Sr"
             target="_blank"
             rel="noopener noreferrer"
             data-testid="button-discord"
