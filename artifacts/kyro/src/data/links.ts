@@ -125,4 +125,3 @@ export const links: KyroLink[] = [
   { slug: "questspoofer", title: "Quest Spoofer", url: "https://sites.google.com/view/questspoofer/home" },
   { slug: "discordptb", title: "Discord PTB", url: "https://ptb.discord.com/" }
 ];
-];
