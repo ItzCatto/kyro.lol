@@ -121,6 +121,8 @@ export const links: KyroLink[] = [
   { slug: "photon", title: "Photon", url: "https://photonsys.sellpass.io/" },
   { slug: "dx9ware", title: "DX9WARE V2", url: "https://cultofintellect.com/" },
   { slug: "whatexpsare", title: "WhatExpsAre.Online", url: "https://whatexpsare.online/" },
-  { slug: "questspoofer", title: "Quest Spoofer", url: "https://sites.google.com/view/questspoofer/home" }
+   // Quest Spoofers & Others
+  { slug: "questspoofer", title: "Quest Spoofer", url: "https://sites.google.com/view/questspoofer/home" },
   { slug: "discordptb", title: "Discord PTB", url: "https://ptb.discord.com/" }
+];
 ];
