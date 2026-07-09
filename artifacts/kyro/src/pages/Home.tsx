@@ -31,7 +31,7 @@ export default function Home() {
           className="mt-10 flex items-center justify-center gap-3"
         >
           <a
-            href="https://discord.gg/dzBkXQg4Sr"
+            href="https://discord.gg/hj7GSxwFQf"
             target="_blank"
             rel="noopener noreferrer"
             data-testid="button-discord"
@@ -42,7 +42,7 @@ export default function Home() {
             <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
           </a>
           <a
-            href="https://discord.gg/dzBkXQg4Sr"
+            href="https://discord.gg/hj7GSxwFQf"
             target="_blank"
             rel="noopener noreferrer"
             data-testid="button-support"
