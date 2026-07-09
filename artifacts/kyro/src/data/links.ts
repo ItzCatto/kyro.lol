@@ -123,5 +123,6 @@ export const links: KyroLink[] = [
   { slug: "whatexpsare", title: "WhatExpsAre.Online", url: "https://whatexpsare.online/" },
    // Quest Spoofers & Others
   { slug: "questspoofer", title: "Quest Spoofer", url: "https://sites.google.com/view/questspoofer/home" },
-  { slug: "discordptb", title: "Discord PTB", url: "https://ptb.discord.com/" }
+  { slug: "discordptb", title: "Discord PTB", url: "https://ptb.discord.com/" },
+  { slug: "contributor", title: "Contributor Form", url: "https://form.typeform.com/to/JgbuVUcv" },
 ];
