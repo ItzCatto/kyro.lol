@@ -181,4 +181,5 @@ export const links: KyroLink[] = [
   { slug: "vidplay", title: "VidPlay", url: "https://fmhy.net/video#streaming-sites" },
   { slug: "playtorrio", title: "PlayTorrio", url: "https://fmhy.net/video#streaming-sites" },
   { slug: "movcli", title: "mov-cli", url: "https://fmhy.net/video#streaming-sites" },
+  { slug: "hianime", title: "HiAnime", url: "https://hianime.ms/" },
 ];
