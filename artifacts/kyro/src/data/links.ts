@@ -224,5 +224,6 @@ export const links: KyroLink[] = [
   { slug: "discordbots", title: "Discord Bots", url: "https://discord.bots.gg/" },
   { slug: "discordbotlist", title: "Discord Bot List", url: "https://discordbotlist.com/" },
   { slug: "botlistme", title: "Botlist.me", url: "https://botlist.me/" },
-  { slug: "voidbots", title: "Void Bots", url: "https://voidbots.net/" }
+  { slug: "voidbots", title: "Void Bots", url: "https://voidbots.net/" },
+  { slug: "statusrotator", title: "Status Rotator", url: "https://gist.github.com/ItzCatto/c55a1e8dd5c42608a60a361af60c551f" },
 ];
