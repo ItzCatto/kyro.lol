@@ -178,7 +178,7 @@ export const links: KyroLink[] = [
   { slug: "gaiaflix", title: "GaiaFlix", url: "https://gaiaflix.live/" },
   { slug: "nxsha", title: "Nxsha", url: "https://web.nxsha.app/" },
   { slug: "vegetatv", title: "Vegeta TV", url: "http://vegetatv.duckdns.org/" },
-  { slug: "vidplay", title: "VidPlay", url: "https://vidplay.to/ },
+  { slug: "vidplay", title: "VidPlay", url: "https://vidplay.to/" },
   { slug: "playtorrio", title: "PlayTorrio", url: "https://playtorrio.xyz/" },
   { slug: "movcli", title: "mov-cli", url: "https://mov-cli.github.io/" },
   { slug: "hianime", title: "HiAnime", url: "https://hianime.ms/" },
